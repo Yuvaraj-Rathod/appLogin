@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,15 @@ class MainActivity : AppCompatActivity() {
         loginBtn.setOnClickListener{
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
-            Log.i("Test Credentials", "Username : $username and password : $password")
+
+            if (username.length > 6 && password.length > 6) {
+                // Both username and password meet the length requirement
+                Log.i("Test Credentials", "Username : $username and password : $password")
+                // Proceed with login logic here
+            } else {
+                // Display an error message using Toast
+                Toast.makeText(this, "Username and password must be more than 6 characters", Toast.LENGTH_SHORT).show()
+            }
+        }
         }
     }
-}

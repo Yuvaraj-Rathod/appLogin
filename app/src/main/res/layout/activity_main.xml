@@ -14,12 +14,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
-            android:layout_width="160dp"
-       android:layout_height="160dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/icon_account_circle" />
 
-            <EditText
+        <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -93,11 +95,5 @@
 
 
         </LinearLayout>
-
-
-
-
-
-
-
-    </LinearLayout></RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
